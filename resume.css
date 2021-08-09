@@ -1,0 +1,190 @@
+body
+{
+  margin-top: 2em;
+  text-align: center;
+  color: #cbcbce;
+  background: rgb(59, 58, 55);
+  background-image: radial-gradient(farthest-side ellipse at center,
+    rgba(228, 222, 214, 0.85) 39% rgba(99, 96, 89, 0.5) 100%),
+    url("img/background.png");
+  background-size: cover;
+}
+
+h1, em, #information
+{
+  display: block;
+  font-size: 25px;
+  font-weight: normal;
+  margin: 2em auto;
+}
+
+h1
+{
+  font-size: 50px;
+}
+
+dl.self
+{
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin: 0px;
+}
+dl.self dt
+{
+  float: left;
+  display: block;
+  width: 30%;
+  padding-top: 5px;
+  margin: 0 0 15px 10px;
+  text-align: left;
+  /* border: 1px solid red; */
+}
+dl.self dd
+{
+  display: block;
+  float: left;
+  width: 40%;
+  padding-top: 5px;
+  margin: 0 0 15px 10px;
+  text-align: left;
+  /* border: 1px solid blue; */
+}
+dl.education
+{
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin: 0px;
+}
+dl.education dt
+{
+  float: left;
+  display: block;
+  width: 40%;
+  padding-top: 10px;
+  margin: 0 ;
+  text-align: left;
+  /* border: 1px solid red; */
+}
+dl.education dd
+{
+  display: block;
+  float: left;
+  width: 30%;
+  padding-top: 10px;
+  margin: 0px;
+  margin-bottom: 25px;
+  text-align: left;
+  /* border: 1px solid blue; */
+}
+
+ul.skills li
+{
+  margin: 15px;
+}
+
+
+a{
+  color: #a4a4d8;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 50px;
+  text-align: right;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
+#container
+{
+  margin: 0 auto;
+  width: 1920px;
+  height: 1080px;
+}
+
+.wrapper
+{
+  display: inline-block;
+  width: 600px;
+  height: 338px;
+  vertical-align: top;
+  margin: 2em 2em 10em 0;
+  cursor: pointer;
+  position: relative;
+  perspective: 4000px;
+}
+
+.item
+{
+  height: 338px;
+  transform-style: preserve-3d;
+  transition: transform .6s;
+}
+
+.item:hover
+{
+  transform: translateZ(-180px) rotateX(95deg);
+}
+
+.item img
+{
+  display: block;
+  position: absolute;
+  top: 0;
+  border-radius: 3px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transform: translateZ(180px);
+  transition: all .6s;
+  width: 600px;
+  height: 338px;
+}
+
+.item .information
+{
+  display: block;
+  position: absolute;
+  color: white;
+  top: 0;
+  height: 330px;
+  width: 580px;
+  text-align: left;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 25px;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+  background: rgb(236, 241, 244);
+  background: linear-gradient(to bottom, rgb(88, 89, 90)
+    0%, rgb(71, 76, 82) 100%);
+
+  transform: rotateX(-90deg) translateZ(163px);
+  transition: all .6s;
+
+}
+
+.information strong
+{
+  display: block;
+  margin: .2em 0 .5em 0;
+  font-size: 28px;
+}
+
+.item:hover img{
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+.item:hover .information
+{
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.up-vote:hover
+{
+  cursor: url(img/upvote.jpg), help;
+  text-align: center;
+}
