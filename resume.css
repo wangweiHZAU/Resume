@@ -8,7 +8,8 @@ html, body{
 
 body{
     background: rgb(59, 58, 55);
-    background-image: url("img/background.png");
+    background-image: linear-gradient(to bottom, rgba(48, 48, 7, 0.5), rgba(2, 2, 88, 0.5)),
+        url("img/background.png");
     
     background-size:auto;
 }
@@ -41,23 +42,23 @@ h1, em, #information
 h1
 {
   font-size: 50px;
+  padding: 10px 0 20px;
 }
 
 .top-item, .bottom-item{
     display: flex;
-    
+    justify-content: center;
 }
 
 dl.self
 {
-  display: block;
+  display: flex;
   width: 100%;
   overflow: hidden;
   /* margin: 0px; */
 }
-dl.self dt
+dl.self .key
 {
-  float: left;
   display: block;
   width: 30%;
   padding-top: 5px;
@@ -65,43 +66,47 @@ dl.self dt
   text-align: left;
   /* border: 1px solid red; */
 }
-dl.self dd
+dl.self .value
 {
   display: block;
-  float: left;
   width: 40%;
   padding-top: 5px;
   /* margin: 0 0 15px 10px; */
   text-align: left;
   /* border: 1px solid blue; */
 }
+
 dl.education
 {
-  display: block;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 200px 100px 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* width: 100%; */
   overflow: hidden;
   /* margin: 0px; */
 }
 dl.education dt
 {
-  float: left;
-  display: block;
-  width: 40%;
+  display: grid;
+  /* width: 40%; */
   padding-top: 10px;
   /* margin: 0 ; */
   text-align: left;
   /* border: 1px solid red; */
+  justify-content: center;
+  align-items: center;
 }
 dl.education dd
 {
-  display: block;
-  float: left;
-  width: 30%;
+  /* width: 30%; */
   padding-top: 10px;
   /* margin: 0px; */
   margin-bottom: 25px;
   text-align: left;
   /* border: 1px solid blue; */
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ul.skills li
@@ -129,7 +134,7 @@ a:hover
   width: 600px;
   height: 338px;
   vertical-align: top;
-  /* margin: 2em 2em 10em 0; */
+  padding: 0 15px 0;
   cursor: pointer;
   position: relative;
   perspective: 4000px;
@@ -198,11 +203,16 @@ a:hover
 .item:hover .information
 {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
+  border-radius: 10px;
+}
+
+.up-vote{
+    text-align: center;
 }
 
 .up-vote:hover
 {
-  cursor: url(img/upvote.jpg), help;
-  text-align: center;
+  cursor: url(img/upvote.jpg), grab;
+  /* transform: translateX(100px); */
+  transition: all ease-in-out 0.5s;
 }
